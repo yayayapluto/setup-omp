@@ -4,7 +4,7 @@ const md = fs.readFileSync("SETUP.md", "utf8")
 let ok = true
 const fail = (m) => { console.error(m); ok = false }
 
-for (const f of ["SETUP.md", "LICENSE"]) {
+for (const f of ["SETUP.md", "README.md", "LICENSE"]) {
   if (!fs.existsSync(f)) fail(`missing ${f}`)
 }
 if (!md.startsWith("# SETUP.md")) fail("title missing")
